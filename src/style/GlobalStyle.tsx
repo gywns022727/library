@@ -6,10 +6,10 @@ const GlobalStyle = createGlobalStyle`
 		padding: 0;
 		text-decoration: inherit;
   	box-sizing: border-box;
-		font-family : 'Noto Sans KR'
   }
-
+	
   body {
+		font-family : 'Noto Sans KR'
   }
 `;
 
