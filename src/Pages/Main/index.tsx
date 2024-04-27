@@ -1,4 +1,3 @@
-import React from "react";
 import { Map } from "react-kakao-maps-sdk";
 
 export default function Main() {
@@ -6,12 +5,12 @@ export default function Main() {
     <div>
       <Map
         center={{
-          lat: 33.450701,
-          lng: 126.570667,
+          lat: 37.5028448,
+          lng: 126.9173764,
         }}
         style={{
-          width: "500px",
-          height: "500px",
+          width: "100vw",
+          height: "100vh",
         }}
         level={3}
       />
