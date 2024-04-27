@@ -15,8 +15,7 @@
     "react-dom": "^18.2.0",
     "react-kakao-maps-sdk": "^1.1.26",
     "react-router-dom": "^6.23.0",
-    "styled-components": "^6.1.8",
-    "vite-plugin-svgr": "^4.2.0"
+    "styled-components": "^6.1.8"
   },
   "devDependencies": {
     "@types/node": "^20.12.7",
@@ -34,6 +33,7 @@
     "kakao.maps.d.ts": "^0.1.39",
     "typescript": "^5.2.2",
     "vite": "^5.2.0",
+    "vite-plugin-svgr": "^4.2.0",
     "vite-tsconfig-paths": "^4.3.2"
   }
 }
