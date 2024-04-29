@@ -1,19 +1,22 @@
 import { Map } from "react-kakao-maps-sdk";
 
+import { useGeolocation } from "@/Hooks/useGeolocation";
+
+import SideBar from "@/components/layout/SideBar";
+import { Container } from "./styled";
+
+const mapSize = {
+  width: "100%",
+  height: "100%",
+};
+
 export default function Main() {
+  const currentPosition = useGeolocation();
+
   return (
-    <div>
-      <Map
-        center={{
-          lat: 37.5028448,
-          lng: 126.9173764,
-        }}
-        style={{
-          width: "100vw",
-          height: "100vh",
-        }}
-        level={3}
-      />
-    </div>
+    <Container>
+      <SideBar />
+      <Map center={currentPosition} style={mapSize} level={3} />
+    </Container>
   );
 }
