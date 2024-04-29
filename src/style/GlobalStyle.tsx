@@ -7,9 +7,10 @@ const GlobalStyle = createGlobalStyle`
 		text-decoration: inherit;
   	box-sizing: border-box;
   }
-	
+
   body {
-		font-family : 'Noto Sans KR'
+		overflow: hidden;
+		font-family : 'Noto Sans KR';
   }
 `;
 
