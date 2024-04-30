@@ -1,4 +1,4 @@
-import { Map } from "react-kakao-maps-sdk";
+import { Map, MapMarker } from "react-kakao-maps-sdk";
 
 import { useGeolocation } from "@/Hooks/useGeolocation";
 
@@ -16,7 +16,9 @@ export default function Main() {
   return (
     <Container>
       <SideBar />
-      <Map center={currentPosition} style={mapSize} level={3} />
+      <Map center={currentPosition} style={mapSize} level={3}>
+        <MapMarker position={currentPosition} />
+      </Map>
     </Container>
   );
 }

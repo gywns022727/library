@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const Contaienr = styled.div`
-  background-color: cadetblue;
+  background-color: #fff;
 `;
 
 export { Contaienr };
