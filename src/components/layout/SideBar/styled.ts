@@ -2,18 +2,27 @@ import styled from "styled-components";
 
 const Container = styled.div<{ $sideBar: boolean }>`
   position: relative;
+  transition: 0.3s;
 
-  min-width: 240px;
   width: ${(props) => (props.$sideBar ? "20%" : "0%")};
+  min-width: ${(props) => (props.$sideBar ? "300px" : "0px")};
 
   background-color: #fff;
 `;
 
-const ExpansionButton = styled.button`
+const SearchContainer = styled.div`
+  padding: 20px;
+
+  width: 100%;
+  height: 200px;
+  background-color: #4caf50;
+`;
+
+const ExpansionButton = styled.button<{ $sideBar: boolean }>`
   position: absolute;
-  z-index: 10;
   right: -20px;
   bottom: 50%;
+  z-index: 10;
   transform: translate(0, 50%);
 
   display: flex;
@@ -25,7 +34,14 @@ const ExpansionButton = styled.button`
 
   border: none;
   border-radius: 0 10px 10px 0;
-  background-color: #3cb371;
+  background-color: #fff;
+
+  > svg {
+    color: #4caf50;
+    transition: 0.3s;
+    transform: ${(props) =>
+      props.$sideBar ? "rotate( 0deg )" : "rotate( 180deg )"};
+  }
 `;
 
-export { Container, ExpansionButton };
+export { Container, ExpansionButton, SearchContainer };
